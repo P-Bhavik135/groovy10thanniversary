@@ -8,8 +8,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --primary-color: #1e3a8a; /* Blue */
-      --accent-color: #f97316;  /* Orange */
+      --primary-color: #1e3a8a; 
+      --accent-color: #f97316; 
       --light-bg: #f9fafb;
       --dark-text: #1f2937;
       --transition-speed: 0.3s;
@@ -256,7 +256,7 @@
 </footer>
 
 <script>
-  // Section animations
+  
   const sections = document.querySelectorAll('main section');
   const navLinks = document.querySelectorAll('nav a');
 
