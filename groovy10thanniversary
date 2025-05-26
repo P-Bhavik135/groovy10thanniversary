@@ -42,7 +42,6 @@
       flex-shrink: 0;
     }
 
-    /* Logo highlight */
     .logo-highlight {
       max-width: 400px;
       width: 100%;
@@ -50,7 +49,7 @@
       display: block;
       border-radius: 12px;
       transition: transform 0.4s ease, box-shadow 0.4s ease;
-      box-shadow: 0 0 25px rgba(249, 115, 22, 0.6); /* orange glow */
+      box-shadow: 0 0 25px rgba(249, 115, 22, 0.6);
     }
 
     .logo-highlight:hover {
@@ -199,6 +198,12 @@
 </head>
 <body>
 
+<!-- Audio player (invisible) -->
+<audio id="bg-music" loop>
+  <source src="song.mp3" type="audio/mpeg" />
+  Your browser does not support the audio element.
+</audio>
+
 <header class="hero">
   <img src="image.png" alt="GROOVY Overseas Educational Consultancy Logo" class="logo-highlight" />
   <p>Celebrating a decade of dedication, growth, and global success — thanks to the vision of Mr. Bhaskar and the GROOVY family.</p>
@@ -251,6 +256,7 @@
 </footer>
 
 <script>
+  // Section animations
   const sections = document.querySelectorAll('main section');
   const navLinks = document.querySelectorAll('nav a');
 
@@ -288,6 +294,14 @@
   });
 
   window.dispatchEvent(new Event('scroll'));
+
+  // Music playback on user interaction
+  document.addEventListener('DOMContentLoaded', () => {
+    document.body.addEventListener('click', () => {
+      const music = document.getElementById('bg-music');
+      music.play();
+    }, { once: true });
+  });
 </script>
 
 </body>
