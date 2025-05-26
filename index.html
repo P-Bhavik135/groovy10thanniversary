@@ -198,7 +198,7 @@
 </head>
 <body>
 
-<!-- Audio player (invisible) -->
+
 <audio id="bg-music" loop>
   <source src="song.mp3" type="audio/mpeg" />
   Your browser does not support the audio element.
@@ -295,7 +295,7 @@
 
   window.dispatchEvent(new Event('scroll'));
 
-  // Music playback on user interaction
+  
   document.addEventListener('DOMContentLoaded', () => {
     document.body.addEventListener('click', () => {
       const music = document.getElementById('bg-music');
