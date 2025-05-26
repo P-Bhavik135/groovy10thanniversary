@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Celebrating 10 years of GROOVY Overseas Educational Consultancy — guiding students worldwide to success." />
+  <title>10 Years of GROOVY</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-color: #1e3a8a; /* Blue */
+      --accent-color: #f97316;  /* Orange */
+      --light-bg: #f9fafb;
+      --dark-text: #1f2937;
+      --transition-speed: 0.3s;
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--light-bg);
+      color: var(--dark-text);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header.hero {
+      background: linear-gradient(rgba(30, 58, 138, 0.9), rgba(249, 115, 22, 0.7)),
+        url('https://images.unsplash.com/photo-1531497865141-5f5c724d07f7?auto=format&fit=crop&w=1280&q=80')
+        center/cover no-repeat;
+      color: white;
+      padding: 4rem 2rem 3rem;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    /* Logo highlight */
+    .logo-highlight {
+      max-width: 400px;
+      width: 100%;
+      margin: 0 auto 1.5rem;
+      display: block;
+      border-radius: 12px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      box-shadow: 0 0 25px rgba(249, 115, 22, 0.6); /* orange glow */
+    }
+
+    .logo-highlight:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 35px rgba(249, 115, 22, 0.8);
+    }
+
+    header.hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      font-weight: 500;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.05rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      transition: color var(--transition-speed), background-color var(--transition-speed);
+    }
+
+    nav a:hover,
+    nav a:focus-visible {
+      color: var(--accent-color);
+      background-color: rgba(249, 115, 22, 0.15);
+      outline: none;
+    }
+
+    nav a.active,
+    nav a[aria-current="page"] {
+      color: var(--accent-color);
+      font-weight: 700;
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 0.15rem;
+    }
+
+    main {
+      padding: 3rem 1rem 4rem;
+      max-width: 900px;
+      margin: auto;
+      flex-grow: 1;
+    }
+
+    section {
+      margin-bottom: 4rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      border-left: 5px solid var(--accent-color);
+      padding-left: 12px;
+      font-weight: 700;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.8rem 2rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+
+    blockquote {
+      background: #fff7ed;
+      padding: 1rem 1.5rem;
+      border-left: 5px solid var(--accent-color);
+      font-style: italic;
+      margin-bottom: 1rem;
+      color: #92400e;
+      font-weight: 500;
+      box-shadow: inset 2px 0 5px rgba(249, 115, 22, 0.3);
+      border-radius: 6px;
+    }
+
+    .signature {
+      text-align: right;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-top: 1.5rem;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      background: var(--primary-color);
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      flex-shrink: 0;
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 0.03em;
+      user-select: none;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      header.hero {
+        padding: 3rem 1rem 2.5rem;
+      }
+
+      .logo-highlight {
+        max-width: 90%;
+      }
+
+      main {
+        padding: 2rem 1rem 3rem;
+        max-width: 95%;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="hero">
+  <img src="image.png" alt="GROOVY Overseas Educational Consultancy Logo" class="logo-highlight" />
+  <p>Celebrating a decade of dedication, growth, and global success — thanks to the vision of Mr. Bhaskar and the GROOVY family.</p>
+</header>
+
+<nav>
+  <a href="#about" aria-current="page">About</a>
+  <a href="#message">Message</a>
+  <a href="#values">Values</a>
+  <a href="#tribute">Tribute</a>
+</nav>
+
+<main>
+  <section id="about" class="card">
+    <h2>About GROOVY</h2>
+    <p>GROOVY Overseas Educational Consultancy was born from the desire to help students reach their full potential. Over the last decade, it has supported and guided over a thousand students in securing admissions to top universities across the globe.</p>
+  </section>
+
+  <section id="message" class="card">
+    <h2>Message from the Founder</h2>
+    <blockquote>
+      “Ten years ago, GROOVY was just a vision—to guide aspiring students toward a brighter future through global education.
+      Today, that vision has touched countless lives, and it’s all thanks to the trust of our students and the dedication of our team.
+      As we celebrate this milestone, I look forward to continuing our mission with even more passion and purpose.
+      Here’s to many more years of success and service.”
+    </blockquote>
+    <p class="signature">— Mr. Bhaskar<br>Founder, GROOVY Overseas Educational Consultancy</p>
+  </section>
+
+  <section id="values" class="card">
+    <h2>Our Values</h2>
+    <ul>
+      <li><strong>Empathy</strong> – We understand every student's unique journey.</li>
+      <li><strong>Integrity</strong> – Transparent guidance with honest intentions.</li>
+      <li><strong>Commitment</strong> – Dedicated to every student's success story.</li>
+      <li><strong>Innovation</strong> – Constantly evolving with global trends.</li>
+    </ul>
+  </section>
+
+  <section id="tribute" class="card">
+    <h2>A Tribute to Mr. Bhaskar</h2>
+    <p>Behind every successful GROOVY student stands the unwavering vision of my father, Mr. Bhaskar. A man whose tireless effort, compassion, and belief in education have changed hundreds of lives.</p>
+    <p>This milestone is not just about a business, but about the hearts he has inspired, the futures he has lifted, and the legacy he continues to build every day.</p>
+    <p class="signature">— With love and respect, Bhavik</p>
+  </section>
+</main>
+
+<footer>
+  Thank you for believing in GROOVY. Here's to a future full of possibilities. 🌍✨
+</footer>
+
+<script>
+  const sections = document.querySelectorAll('main section');
+  const navLinks = document.querySelectorAll('nav a');
+
+  function updateActiveLink() {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 160;
+      if (window.pageYOffset >= sectionTop) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      link.removeAttribute('aria-current');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+        link.setAttribute('aria-current', 'page');
+      }
+    });
+  }
+
+  function revealSections() {
+    sections.forEach(section => {
+      const sectionTop = section.getBoundingClientRect().top;
+      if (sectionTop < window.innerHeight - 100) {
+        section.classList.add('show');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', () => {
+    updateActiveLink();
+    revealSections();
+  });
+
+  window.dispatchEvent(new Event('scroll'));
+</script>
+
+</body>
+</html>
